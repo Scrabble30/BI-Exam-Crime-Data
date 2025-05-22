@@ -21,22 +21,40 @@ def show_homepage():
         1. How does original custodial sentence length impact the probability and timing of recidivism?
         2. To what extent does education level reduce the three-year recidivism rate?
         3. Do conditional sentences lead to faster recidivism compared to unconditional custodial sentences?
-        4. Are younger releasees (<25 years) more likely to reoffend sooner than older releasees (>40 years)?
+        4. Are younger releasees (<25 years) more likely to reoffend than older releasees (>40 years)?
     """)
     st.write("")
 
     st.subheader("Hypotheses & Datasets")
-    st.write("•H₀: Original sentence length does not predict recidivism rate or timing.")
-    st.write("H₁: Longer sentences associate with lower probability and slower timing of recidivism.")
-    st.write("Datasets: RECIDIV3, RECIDIV4")
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>H₀:</strong> Original sentence length does not predict recidivism rate or timing.</li>
+            <li><strong>H₁:</strong> Longer sentences associate with lower probability and slower timing of recidivism.</li>
+            <li><strong>Datasets:</strong> RECIDIV10</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
     st.write("")
-    st.write("•H₀: Education level has no effect on three-year recidivism rate.")
-    st.write("H₁: Higher education significantly reduces recidivism.")
-    st.write("Datasets: RECIDIV6, RECIDIV7, RECIDIV8, RECIDIV9")
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>H₀:</strong> Education level has no effect on three-year recidivism rate.</li>
+            <li><strong>H₁:</strong> Higher education significantly reduces recidivism.</li>
+            <li><strong>Datasets:</strong> RECIDIV9</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
     st.write("")
-    st.write("•H₀: Time-to-reoffense is the same for conditional and unconditional sentences.")
-    st.write("H₁: Those given conditional sentences reoffend faster.")
-    st.write("Datasets: RECIDIV1, RECIDIV5")
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>H₀:</strong> Time-to-reoffense is the same for conditional and unconditional sentences.</li>
+            <li><strong>H₁:</strong> Those given conditional sentences reoffend faster.</li>
+            <li><strong>Datasets:</strong> RECIDIV10</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
     st.write("")
 
     st.subheader("🛠 Tools & Platforms")
@@ -50,7 +68,7 @@ def show_homepage():
 
     st.subheader("Data Sources & Links")
     st.markdown("""
-    - RECIDIV1–9, RECIDIV11: Time to recidivism, original sentence, education (2007–2022)
+    - RECIDIV1–9, RECIDIV10: Time to recidivism, original sentence, education (2007–2022)
                 
     - https://www.statistikbanken.dk/10059
     """)
