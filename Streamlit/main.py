@@ -1,5 +1,6 @@
 import streamlit as st
 import recidiv9CleanUp
+import recidiv10CleanUp
 
 def show_homepage():
     st.image('images/crime.jpg', caption='Crime Data Visualization', use_column_width=True)
@@ -81,13 +82,15 @@ def show_homepage():
 def main():
     st.sidebar.title("Crime Data")
     show_home = st.sidebar.button("🏠 Home Page")
-    cleanup_page = st.sidebar.selectbox("Clean up", ["Recidiv 9 - Cleanup"])
+    cleanup_page = st.sidebar.selectbox("Clean up", ["Recidiv 9 - Cleanup", "Recidiv 10 - Cleanup"])
     page = st.sidebar.selectbox("test", ["test"])
 
     if show_home:
         show_homepage()
     elif cleanup_page == "Recidiv 9 - Cleanup":
         recidiv9CleanUp.recidiv9cleanup()
+    elif cleanup_page == "Recidiv 10 - Cleanup":
+        recidiv10CleanUp.recidiv10cleanup()
 
 
 if __name__ == "__main__":
