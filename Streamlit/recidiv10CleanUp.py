@@ -1,17 +1,17 @@
 import streamlit as st
 import pandas as pd
 
-def recidiv9cleanup():
-    st.title("RECIDIV9 – Data Cleanup Overview")
+def recidiv10cleanup():
+    st.title("RECIDIV10 – Data Cleanup Overview")
 
-    df = pd.read_csv("Data/Recidiv9/CleanedRecidiv9.csv")
-    df2 = pd.read_csv("Data/Recidiv9/EncodedRecidiv9.csv")
+    df = pd.read_csv("Data/Recidiv10/CleanedRecidiv10.csv")
+    df2 = pd.read_csv("Data/Recidiv10/EncodedRecidiv10.csv")
 
     st.markdown("""
     <div style="border: 1px color: white; solid #ccc; padding: 15px; border-radius: 8px; background-color: black;">
     <h3>📊 What We Did</h3>
 
-    This page explains how we prepared the <strong>RECIDIV9</strong> dataset for analysis.
+    This page explains how we prepared the <strong>RECIDIV10</strong> dataset for analysis.
 
     ---
 
@@ -20,17 +20,17 @@ def recidiv9cleanup():
     1. **Loaded raw CSV** with no headers (from Statistics Denmark)
     2. **Renamed columns** based on:
     - Recidivism event codes
-    - Education level
-    - Gender
-    - Age group
-    - Time period (e.g., 2008–2010, 2009–2011, etc.)
+    - Prior convictions
+    - Sentence duration until reoffense
+    - Gender and age group
+    - Time period (e.g., 2009–2011, 2010–2012, etc.)
     3. **Melted** the data from wide to long format (for each time period and demographic group)
     4. **Mapped codes to labels**:
-    - E.g., `"106"` → `"Ingen tilbagefald"`, `"10"` → `"Grundskole"`, etc.
+    - E.g., `"106"` → `"Ingen tilbagefald"`, `"3"` → `"3 Tidligere domme"`, etc.
     5. **Converted values** to numeric types where necessary (e.g., number of people)
     6. **Exported** two files:
-    - `CleanedRecidiv9.csv`: labeled, readable data
-    - `EncodedRecidiv9.csv`: label-encoded version for ML use
+    - `CleanedRecidiv10.csv`: labeled, readable data
+    - `EncodedRecidiv10.csv`: label-encoded version for ML use
 
     ---
 
@@ -50,5 +50,3 @@ def recidiv9cleanup():
 
     st.subheader("🧾 Preview of Encoded Data")
     st.dataframe(df2.head(10))
-
-
