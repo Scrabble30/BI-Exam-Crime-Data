@@ -4,8 +4,8 @@ import pandas as pd
 def recidiv9cleanup():
     st.title("RECIDIV9 – Data Cleanup Overview")
 
-    df = pd.read_csv("Data/CleanedRecidiv9.csv")
-    df2 = pd.read_csv("Data/EncodedRecidiv9.csv")
+    df = pd.read_csv("Data/Recidiv9/CleanedRecidiv9.csv")
+    df2 = pd.read_csv("Data/Recidiv9/EncodedRecidiv9.csv")
 
     st.markdown("""
     <div style="border: 1px color: white; solid #ccc; padding: 15px; border-radius: 8px; background-color: black;">
