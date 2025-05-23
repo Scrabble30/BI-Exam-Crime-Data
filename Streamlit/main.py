@@ -10,13 +10,14 @@ def show_homepage():
     st.write('Group 6 - Made by: Bekhan, Otto, Victor & Patrick')
 
     st.header("""Sprint 1: Problem Formulation""")
+    st.write("---------------")
     st.subheader("Brainstorm:")
     st.write("After reviewing recidivism literature and exploring datasets on Statistics Denmark (Statistikbanken), our team identified the RECIDIV and STRAF series tables as rich sources. Key variables include original sentence length, education level, time-to-recidivism, and offender demographics. We compared BI use cases in public policy and correctional program evaluation to pinpoint how data-driven insights can optimize rehabilitation strategies.")
-    st.write("")
+    st.write("---------------")
 
     st.subheader("Brief Annotation:")
     st.write("This project investigates which factors most influence recidivism rates among released offenders in Denmark. We examine how sentence severity and educational attainment affect the likelihood and timing of reoffense within three years. Using BI tools and predictive modeling, we aim to forecast recidivism risk for individuals based on these key variables. Insights will support policymakers and social workers in designing targeted interventions to reduce reoffending and improve reintegration outcomes.")
-    st.write("")
+    st.write("---------------")
 
     st.subheader("Research Questions:")
     st.markdown("""
@@ -74,16 +75,15 @@ def show_homepage():
         </ul>
     </div>
     """, unsafe_allow_html=True)
-    st.write("")
+    st.write("___")
 
     st.subheader("Hypotheses & Datasets")
     st.markdown("""
     <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
             <li><strong>Education and Recidivism (RECIDIV9)</strong></li>
-            <li><strong>H₀:</strong> Original sentence length does not predict recidivism rate or timing.</li>
-            <li><strong>H₁:</strong> Longer sentences associate with lower probability and slower timing of recidivism.</li>
-            <li><strong>Datasets:</strong> RECIDIV10</li>
+            <li><strong>H₀:</strong> There is no difference in recidivism rates across education levels.</li>
+            <li><strong>H₁:</strong> Individuals with higher education have significantly lower recidivism rates than those with basic education.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -91,9 +91,9 @@ def show_homepage():
     st.markdown("""
     <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>H₀:</strong> Education level has no effect on three-year recidivism rate.</li>
-            <li><strong>H₁:</strong> Higher education significantly reduces recidivism.</li>
-            <li><strong>Datasets:</strong> RECIDIV9</li>
+            <li><strong>Prior Convictions and Recidivism (RECIDIV10)</strong></li>
+            <li><strong>H₀:</strong> Previous convictions do not affect the likelihood of recidivism.</li>
+            <li><strong>H₁:</strong> Individuals with prior convictions have a higher likelihood of reoffending.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
