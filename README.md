@@ -45,7 +45,7 @@ Variables: Køn, Uddannelse, Recidivhændelser
 Purpose: To test for gender disparities in recidivism under similar educational backgrounds.
 ____________________________________________________________________________________________________
 
-RQ5. Are younger individuals (15–24 years) more likely to reoffend than older individuals (50+ years)?
+RQ5. Are younger individuals more likely to reoffend than older individuals?
 Datasets: RECIDIV9 and RECIDIV10
 
 Variables: Alder, Recidivhændelser
