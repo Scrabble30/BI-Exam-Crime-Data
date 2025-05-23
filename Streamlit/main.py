@@ -21,92 +21,54 @@ def show_homepage():
 
     st.subheader("Research Questions:")
     st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+    <div style="border: 0px solid #ccc; color: white; padding: 15px; border-radius: 8px; background-color: #262730;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>RQ1.</strong> Does the level of education affect the likelihood of recidivism across different age groups?</li>
-            <li><strong>Dataset:</strong> RECIDIV9</li>
-            <li></li>
-            <li><strong>Variables:</strong> Recidivhændelser, Uddannelse, Alder, Køn</li>
-            <li><strong>Purpose:</strong> To examine whether individuals with higher educational attainment have lower rates of recidivism within each age group.</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
-        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>RQ2.</strong> Are individuals with previous convictions more likely to recidivate than those without?</li>
-            <li><strong>Dataset:</strong> RECIDIV10</li>
-            <li></li>
-            <li><strong>Variables:</strong> Tidligere_domme, Recidivhændelser</li>
-            <li><strong>Purpose:</strong> To evaluate how prior criminal records influence the likelihood of committing new offenses.</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
-        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>RQ3.</strong> How does the number of previous convictions relate to the speed of reoffending?</li>
-            <li><strong>Dataset:</strong> RECIDIV10</li>
-            <li></li>
-            <li><strong>Variables:</strong> Tidligere_domme, Varighed_til_tilbagefald</li>
-            <li><strong>Purpose:</strong> To determine if repeat offenders reoffend faster than first-time offenders.</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
-        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>RQ4.</strong> Does gender influence the recidivism rate among those with the same educational level?</li>
-            <li><strong>Dataset:</strong> RECIDIV9</li>
-            <li></li>
-            <li><strong>Variables:</strong> Køn, Uddannelse, Recidivhændelser</li>
-            <li><strong>Purpose:</strong> To test for gender disparities in recidivism under similar educational backgrounds.</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
-        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>RQ5.</strong> Are younger individuals more likely to reoffend than older individuals?</li>
-            <li><strong>Dataset:</strong> RECIDIV9 and RECIDIV10</li>
-            <li></li>
-            <li><strong>Variables:</strong> Alder, Recidivhændelser</li>
-            <li><strong>Purpose:</strong> To compare age-related risk of recidivism.</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-    st.write("___")
-
-    st.subheader("Hypotheses & Datasets")
-    st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
-        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>Education and Recidivism (RECIDIV9)</strong></li>
-            <li><strong>H₀:</strong> There is no difference in recidivism rates across education levels.</li>
-            <li><strong>H₁:</strong> Individuals with higher education have significantly lower recidivism rates than those with basic education.</li>
+            <li><strong>RQ1: Linear Regression</strong></li>
+            <li><strong>Question:</strong> How do prior convictions, age, and gender predict the time until first reoffense?</li>
+            <li><strong>Dataset:</strong> Recidiv 10 </li>
+            <li>______________________________________________________________________________</li>
+            <li><strong>H:</strong> Offenders with more prior convictions, younger age, or male gender will have significantly shorter times until first reoffense.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
     st.write("")
     st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+    <div style="border: 0px solid #ccc; color: white; padding: 15px; border-radius: 8px; background-color: #262730;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>Prior Convictions and Recidivism (RECIDIV10)</strong></li>
-            <li><strong>H₀:</strong> Previous convictions do not affect the likelihood of recidivism.</li>
-            <li><strong>H₁:</strong> Individuals with prior convictions have a higher likelihood of reoffending.</li>
+            <li><strong>RQ2: Clustering</strong></li>
+            <li><strong>Question:</strong> What natural clusters of offenders emerge when grouping by recidivism frequency, education, age, and gender?</li>
+            <li><strong>Dataset:</strong> Recidiv 9 </li>
+            <li>______________________________________________________________________________</li>
+            <li><strong>H:</strong> Distinct offender clusters (e.g., “young low-educated repeat offenders” vs. “older high-educated occasional offenders”) will emerge with strong internal cohesion (silhouette score ≥ 0.5).</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
     st.write("")
     st.markdown("""
-    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+    <div style="border: 0px solid #ccc; color: white; padding: 15px; border-radius: 8px; background-color: #262730;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
-            <li><strong>H₀:</strong> Time-to-reoffense is the same for conditional and unconditional sentences.</li>
-            <li><strong>H₁:</strong> Those given conditional sentences reoffend faster.</li>
-            <li><strong>Datasets:</strong> RECIDIV10</li>
+            <li><strong>RQ3: Classification</strong></li>
+            <li><strong>Question:</strong> Can we classify whether an individual will reoffend at least once based on age, gender, and prior convictions?</li>
+            <li><strong>Dataset:</strong> Recidiv 10 </li>
+            <li>______________________________________________________________________________</li>
+            <li><strong>H:</strong> A classification model using age, gender, and prior convictions will achieve ROC AUC ≥ 0.75 in predicting any recidivism.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
+    st.write("")
+    st.markdown("""
+    <div style="border:0px solid #ccc; color: white; padding: 15px; border-radius: 8px; background-color: #262730;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ4: Descriptive Statistics</strong></li>
+            <li><strong>Question:</strong> What are the central tendency and variability characteristics of “time until first reoffense” across different education levels?</li>
+            <li><strong>Dataset:</strong> Recidiv 6 </li>
+            <li>______________________________________________________________________________</li>
+            <li><strong>H:</strong> The distribution of time to first reoffense (e.g., mean, median, variance) differs significantly between education levels, with higher-educated offenders exhibiting longer times until reoffense.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    st.write("")
+    
     st.write("")
 
     st.subheader("🛠 Tools & Platforms")
