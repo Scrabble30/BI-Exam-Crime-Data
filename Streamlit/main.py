@@ -20,17 +20,67 @@ def show_homepage():
 
     st.subheader("Research Questions:")
     st.markdown("""
-        1. How does original custodial sentence length impact the probability and timing of recidivism?
-        2. To what extent does education level reduce the three-year recidivism rate?
-        3. Do conditional sentences lead to faster recidivism compared to unconditional custodial sentences?
-        4. Are younger releasees (<25 years) more likely to reoffend than older releasees (>40 years)?
-    """)
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ1.</strong> Does the level of education affect the likelihood of recidivism across different age groups?</li>
+            <li><strong>Dataset:</strong> RECIDIV9</li>
+            <li></li>
+            <li><strong>Variables:</strong> Recidivhændelser, Uddannelse, Alder, Køn</li>
+            <li><strong>Purpose:</strong> To examine whether individuals with higher educational attainment have lower rates of recidivism within each age group.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ2.</strong> Are individuals with previous convictions more likely to recidivate than those without?</li>
+            <li><strong>Dataset:</strong> RECIDIV10</li>
+            <li></li>
+            <li><strong>Variables:</strong> Tidligere_domme, Recidivhændelser</li>
+            <li><strong>Purpose:</strong> To evaluate how prior criminal records influence the likelihood of committing new offenses.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ3.</strong> How does the number of previous convictions relate to the speed of reoffending?</li>
+            <li><strong>Dataset:</strong> RECIDIV10</li>
+            <li></li>
+            <li><strong>Variables:</strong> Tidligere_domme, Varighed_til_tilbagefald</li>
+            <li><strong>Purpose:</strong> To determine if repeat offenders reoffend faster than first-time offenders.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ4.</strong> Does gender influence the recidivism rate among those with the same educational level?</li>
+            <li><strong>Dataset:</strong> RECIDIV9</li>
+            <li></li>
+            <li><strong>Variables:</strong> Køn, Uddannelse, Recidivhændelser</li>
+            <li><strong>Purpose:</strong> To test for gender disparities in recidivism under similar educational backgrounds.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
+        <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>RQ5.</strong> Are younger individuals more likely to reoffend than older individuals?</li>
+            <li><strong>Dataset:</strong> RECIDIV9 and RECIDIV10</li>
+            <li></li>
+            <li><strong>Variables:</strong> Alder, Recidivhændelser</li>
+            <li><strong>Purpose:</strong> To compare age-related risk of recidivism.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
     st.write("")
 
     st.subheader("Hypotheses & Datasets")
     st.markdown("""
     <div style="border: 1px solid #ccc; color: black; padding: 15px; border-radius: 8px; background-color: #f9f9f3;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
+            <li><strong>Education and Recidivism (RECIDIV9)</strong></li>
             <li><strong>H₀:</strong> Original sentence length does not predict recidivism rate or timing.</li>
             <li><strong>H₁:</strong> Longer sentences associate with lower probability and slower timing of recidivism.</li>
             <li><strong>Datasets:</strong> RECIDIV10</li>
